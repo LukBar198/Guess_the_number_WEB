@@ -6,13 +6,15 @@
     </head>
     <body>
         <h1>Guess the number</h1>
+        <h1>It is number {guess}</h1>
         <p>Think of a number between 1 and 1000, and I will try to guess it in 10 moves or less.</p>
         <form method="post">
           <input type="hidden" name="min" value="{{ min }}">
           <input type="hidden" name="max" value="{{ max }}">
-          <button type="submit" name="answer" value="too_small">Too small</button>
-          <button type="submit" name="answer" value="too_big">Too big</button>
-          <button type="submit" name="answer" value="win">You win</button>
+          <input type="hidden" name="guess" value="{{ guess }}">
+          <button type="submit" name="response" value="too small">Too small</button>
+          <button type="submit" name="response" value="too big">Too big</button>
+          <button type="submit" name="response" value="win">You win</button>
         </form>
     </body>
 </html>
